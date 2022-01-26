@@ -1,4 +1,6 @@
-# MuloBlog
+# Mulo's Blog
+![Mulo Logo](src/assets/images/mulo-logo.png)
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
 
