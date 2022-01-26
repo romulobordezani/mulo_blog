@@ -13,7 +13,7 @@ import { reducers, metaReducers } from './reducers';
     AboutComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     StoreModule.forRoot(reducers, {
       metaReducers
