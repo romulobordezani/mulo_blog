@@ -5,11 +5,11 @@ plugins:
 
 provider:
   name: aws
-  runtime: nodejs16.x
+  runtime: nodejs14.x
   memorySize: 128
   timeout: 30
   stage: production
-  region: eu-east-1
+  region: us-east-1
 
 package:
   exclude:
@@ -17,6 +17,8 @@ package:
     - node_modules/**
     - e2e/**
     - coverage/**
+    - .angular/**
+    - .vscode/**
     ##- '!src/assets/**'
     - '!node_modules/aws-serverless-express/**'
     - '!node_modules/binary-case/**'
@@ -24,6 +26,7 @@ package:
     - '!node_modules/media-typer/**'
     - '!node_modules/mime-types/**'
     - '!node_modules/mime-db/**'
+    - '!node_modules/@vendia/**'
 
 custom:
   apigwBinary:
@@ -32,7 +35,7 @@ custom:
 
 functions:
   api:
-    handler: lambda.ssrserverless
+    handler: lambda.handler
     events:
       - http: ANY {proxy+}
       - http: ANY /
